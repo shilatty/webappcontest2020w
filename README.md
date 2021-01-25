@@ -1,6 +1,7 @@
 # Name
 
 パワースポット掲示板 / Power spot assessment BBS
+
 投稿者のハンドルネームから、パワースポットを診断し自動で投稿する掲示板です
  
 # DEMO
