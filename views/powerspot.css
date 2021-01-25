@@ -1,0 +1,160 @@
+html {
+	overflow-y: scroll;
+ }
+
+body {
+	/* color: #fdffff; */
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	background-image: url("/bgimg");
+	background-color: #23A1E8;
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+header {
+	background-color: #efefef;
+	position: fixed;
+	z-index: 100;
+}
+
+a {
+	text-decoration: none;
+	color: #23A1E8;
+}
+
+a:hover {
+	color: #337ab7;
+}
+
+.container {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+}
+
+.headcontainer {
+	background-color: #efefef;
+	margin: 0 -9999px;
+	padding: 0 9999px;
+	display: flex;
+	align-items: center;
+}
+
+.icon {
+	padding-left: 32px;
+}
+
+.icon img {
+	border-radius: 50%;
+	border-width: 4px;
+	border-style: solid;
+	border-color: white;
+	background-color: #23A1E8;
+}
+
+.info {
+	margin-left: 18px;
+	margin-right: 64px;
+	color: #23A1E8;
+	text-align: center;
+}
+
+.logoutButton {
+	margin-bottom: 5;
+}
+
+.info h1 {
+	font-weight: normal;
+	font-size: 24px;
+	margin: 0;
+}
+
+.mainbody {
+	width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 32px;
+	flex: 1;
+}
+
+.postButton {
+	margin-right: 24px;
+}
+
+h2 {
+	color: white;
+	font-weight: normal;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 120px;
+}
+
+h3 {
+	color: white;
+	font-weight: normal;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 48px;
+}
+
+.mainbody > section {
+	text-align: center;
+}
+
+p {
+	line-height: 1.8;
+	font-size: 12px;
+	margin-top: 0;
+	margin-bottom: 0px;
+}
+
+footer {
+	text-align: center;
+	font-size: 14px;
+	color: gray;
+	background-color: #efefef;
+	padding-top: 6px;
+	padding-bottom: 24px;
+}
+
+footer p {
+	margin: 0;
+}
+
+button {
+	padding: 5px 20px;
+	background-color: #337ab7;
+	border-style: none;
+	color: #fdffff;
+}
+
+input {
+	height: 24px;
+}
+
+.innerbox {
+	position: relative;
+}
+
+/* .layer01 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+} */
+
+.layer02 {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 180px;
+	left: 240px;
+	text-align: center;
+	color: red;
+	font-size: 18px;
+	z-index: 50;
+}

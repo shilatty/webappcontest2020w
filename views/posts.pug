@@ -6,25 +6,28 @@ html(lang="jp")
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",
     crossorigin="anonymous")
-    title 秘密のアジト掲示板
+    style
+      include powerspot.css
+    title パワースポット掲示板
   body.container
     header
-      div.container
+      div.headcontainer
         div.icon
-          a() [ insert icon ]
+          a(href="https://stormy-dusk-70668.herokuapp.com/posts")
+            img(src="/icon" width="80px" height="80px" alt="site icon")
         div.info
-          h1 秘密のアジト掲示板
-    div.my-3
-      a(href="/logout").btn.btn-info.float-right ログアウト
-      //- h1 秘密の匿名掲示板
-    h2 新規投稿
-    form(method="post" action="/posts")
+          h1 パワースポット掲示板
+        div.logoutButton
+          a(href="/logout").btn.btn-sm.btn-info.float-right ログアウト 
+    h2 診断したい名前を入れて投稿してみよう
+    form.form-inline(method="post" action="/posts")
       div.form-group
-        textarea(name="content" rows="4").form-control
+        //- textarea(name="content" rows="4").form-control
+        div.postButton
+          input(type="text" name="content" size="20" maxlength="20").form-control
         input(type="hidden" name="oneTimeToken" value=oneTimeToken)
-      div.form-group
-        button(type="submit").btn.btn-primary 投稿
-    h2 投稿一覧
+        button(type="submit").btn.btn-sm.btn-primary パワー！！
+    h3 みんなのパワースポット
     each post in posts
       div.card.my-3
         div.card-header
@@ -36,6 +39,11 @@ html(lang="jp")
               span #{post.id} : ID:#{originalTrackingId}  
         div.card-body
           p.card-text(style="white-space:pre; overflow:auto;") #{post.content}
+          - var mapSrc = post.mapSrc
+          div.innerbox
+            iframe.layer01(src=mapSrc width="480" height="360" frameborder="0" style="border:0;" allowfullscreen area-hidden="false" tabindex="0")
+            //- Google mapの、任意の座標を渡して地図を表示するiframeでは、地図にピンを建てることができないので、地図中央に★マークをCSSで重ねることにしました
+            p.layer02 ★
         div.card-footer
             div 投稿日時: #{post.formattedCreatedAt}
             - var isAdmin = (user === 'admin')
