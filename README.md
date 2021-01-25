@@ -38,13 +38,11 @@ Google Chromeで動作します
  
 DEMO用のID/PWは以下のとおりです
 
-
-admin / SW8fe?O_
-
-guest1 / Hi#+C7LK
-
-guest2 / _AsU=h6g
-
+| ID | PW |
+----|---- 
+| admin | SW8fe?O_ |
+| guest1 | Hi#+C7LK |
+| guest2 | _AsU=h6g |
 
 # Author
  
