@@ -37,16 +37,20 @@ Google Chromeで動作します
 # Usage
  
 DEMO用のID/PWは以下のとおりです
-
+--
 admin
+
 SW8fe?O_
-
+--
 guest1
-Hi#+C7LK
 
+Hi#+C7LK
+--
 guest2
+
 _AsU=h6g
- 
+--
+
 # Author
  
 * 作成者： shilatty　：　しらってぃー　飼い犬の名前です
